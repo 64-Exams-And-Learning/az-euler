@@ -1,0 +1,7 @@
+**/node_modules
+**/typings
+**/.nyc_output
+npm-debug.log
+**/*.d.ts
+**/*.js.map
+src/**/*.js
