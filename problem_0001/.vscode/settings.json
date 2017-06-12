@@ -13,7 +13,6 @@
         "**/*.js.map":true,
         "**/*.js":{"when": "$(basename).ts"},
         "**/.nyc_output":true,
-        "**/coverage":true,
-        "**/typings":true
+        "**/coverage":true
     }
 }

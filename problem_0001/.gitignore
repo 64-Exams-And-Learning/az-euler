@@ -5,3 +5,4 @@ npm-debug.log
 **/*.d.ts
 **/*.js.map
 src/**/*.js
+test/**/*.js

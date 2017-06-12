@@ -6,19 +6,18 @@
   "scripts": {
     "tsc-init": "tsc --init",
     "tsc": "tsc",
-    "test": "tsc && nyc mocha --recursive",
-    "typings-g": "typings install --global --save",
-    "typings-e": "typings install --save"
+    "test": "tsc && nyc mocha --recursive"
   },
   "author": "walt speelman <walt.speelman@gmail.com>",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^2.2.41",
     "chai": "^4.0.2",
     "eslint": "^4.0.0",
     "mocha": "^3.4.2",
     "nyc": "^11.0.2",
     "tslint": "^5.4.3",
-    "typescript": "^2.3.4",
-    "typings": "^2.1.1"
+    "typescript": "^2.3.4"
   }
 }
