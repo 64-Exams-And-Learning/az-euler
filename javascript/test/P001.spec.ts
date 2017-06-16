@@ -5,16 +5,14 @@ import "mocha";
 
 import * as _ from "lodash";
 
-import * as t from "../src/Index";
+import * as t from "../src/P001";
 
 describe ("test answer",()=>{
-    let n = t.sumFactorsOf(10,5,3);
     it("should equal 23",()=>{
-        n.should.equal(23);
+        t.sumFactorsOf(10,5,3).should.equal(23);
     });
 
-    n = t.sumFactorsOf(1000,5,3);
     it("should be ...",()=>{
-        n.should.equal(0);
+        t.sumFactorsOf(1000,5,3).should.equal(233168);
     });
 });
