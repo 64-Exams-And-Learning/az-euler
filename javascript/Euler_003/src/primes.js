@@ -5,20 +5,30 @@ exports.isPrime = function(x) {
     var primes = [1],
         currentComposite = 1;
 
-    function isPrimeNumber(testValue) {
-        if (_.includes(primes, testValue)) return true;
-        if (currentComposite >= testValue) return false;
-        for (var prime of primes) {
-            if (isEvenlyDivisible(testValue, prime) && prime !== 1) return false;
-        }
-        return true;
-    }
-
-    if (isPrimeNumber(primes, currentComposite, x)) {
+    if (isPrimeNumber(x)) {
         primes.push(x);
         return true;
     }
     return false;
+};
+
+
+
+
+function isPrimeNumber(primes, testValue) {
+    if (_.includes(primes, testValue)) return true;
+    if (_.last(primes) >= testValue) return false;
+    for (var prime of primes) {
+        if (isEvenlyDivisible(testValue, prime) && prime !== 1) return false;
+    }
+    return true;
+}
+
+exports.findNextPrime = function(value) {
+    while (!isPrimeNumber([1], value)) {
+        value += 1;
+    }
+    return value;
 };
 
 function isEvenlyDivisible(dividend, divisor) {
