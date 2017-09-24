@@ -1,36 +1,39 @@
 var _ = require('lodash');
 
-exports.isPrime = function(x) {
-    // primes is the memoized list of primes
-    var primes = [1],
-        currentComposite = 1;
+exports.primeFinder = function() {
 
-    if (isPrimeNumber(x)) {
-        primes.push(x);
-        return true;
+    function findNextPrime(value) {
+        while (!isCurrentlyKnownPrime([1], value)) {
+            value += 1;
+        }
+        return value;
     }
-    return false;
-};
 
-
-
-
-function isPrimeNumber(primes, testValue) {
-    if (_.includes(primes, testValue)) return true;
+    function isCurrentlyKnownPrime(primes, testValue) {
+        return _.includes(primes, testValue)) return true;
     if (_.last(primes) >= testValue) return false;
-    for (var prime of primes) {
-        if (isEvenlyDivisible(testValue, prime) && prime !== 1) return false;
-    }
     return true;
 }
 
-exports.findNextPrime = function(value) {
-    while (!isPrimeNumber([1], value)) {
-        value += 1;
-    }
-    return value;
-};
+for (var prime of primes) {
+    if (isEvenlyDivisible(testValue, prime) && prime !== 1) return false;
+}
 
 function isEvenlyDivisible(dividend, divisor) {
     return (dividend % divisor === 0);
 }
+
+// primes is the memoized list of primes
+var primes = [1],
+    currentComposite = 1;
+return function(x) {
+    if (isCurrentlyKnownPrime(primes, x)) return;
+
+    return result;
+};
+// if (isCurrentlyKnownPrime(x)) {
+//     primes.push(x);
+//     return true;
+// }
+// return false;
+};
