@@ -24,25 +24,33 @@ exports.primeFinder = function () {
     }
 
     function isNewPrime(t) {
+        var maxFloor = t,
+            index = 1;
+
+        function isEvenlyDivisible(dividend, divisor) {
+            console.log(`isEvenlyDivisible(${dividend},${divisor}) => {dividend % divisor === 0} : ${dividend % divisor === 0};`)
+            maxFloor = Math.floor(dividend / divisor);
+            return (dividend % divisor === 0);
+        }
         console.log(`isNewPrime([${primes}],${t});`);
-        for (var i = primes.length - 1; i >= 0; i--) {
-            if (isEvenlyDivisible(t, primes[i])) {
-                if (primes[i] === 1) {
+        while (primes[index] < maxFloor) {
+            //for (var i = 1; i < primes.length; i++) {
+            // for (var i = primes.length - 1; i >= 0; i--) {
+            console.log(`maxFloor: ${maxFloor}`);
+            if (isEvenlyDivisible(t, primes[index])) {
+                if (primes[index] === 1) {
                     primes.push(t);
                     return true;
                 } else {
                     return false;
                 }
             }
+            index += 1;
         }
         primes.push(t);
         return true;
     }
 
-    function isEvenlyDivisible(dividend, divisor) {
-        console.log(`isEvenlyDivisible(${dividend},${divisor}) => {dividend % divisor === 0} : ${dividend % divisor === 0};`)
-        return (dividend % divisor === 0);
-    }
     return function (x) {
         var result = false;
         if (isCurrentlyKnownPrime(primes, x)) { return true; }
