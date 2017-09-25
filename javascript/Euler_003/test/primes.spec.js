@@ -32,6 +32,9 @@ describe('primes', function() {
         it('should return false for 12', function() {
             isPrime(12).should.equal(false);
         });
+        it('should return false for 19375751', function() {
+            isPrime(19375751).should.equal(false);
+        });
     });
     // describe('findNextPrime', function() {
     //     it('should return 1 for 0', function() {
