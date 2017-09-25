@@ -17,6 +17,15 @@ describe('primes', function() {
         it('should return false for 4', function() {
             isPrime(4).should.equal(false);
         });
+        // it('should return true for 5', function() {
+        //     isPrime(5).should.equal(false);
+        // });
+        // it('should return true for 37', function() {
+        //     isPrime(37).should.equal(true);
+        // });
+        // it('should return false for 39', function() {
+        //     isPrime(39).should.equal(false);
+        // });
     });
     // describe('findNextPrime', function() {
     //     it('should return 1 for 0', function() {
