@@ -8,7 +8,7 @@
     },
     "scripts": {
         "watch": "mocha --reporter min --watch",
-        "test": "mocha --reporter dot"
+        "test": "mocha"
     },
     "repository": {
         "type": "git",

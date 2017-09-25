@@ -1,12 +1,12 @@
-var primes = require('primes.js');
+var primes = require('./primes.js');
 
-exports.factors = function() {
+exports.factorFinder = function() {
     var isPrime = primes.primeFinder();
     return function(x) {
         var t = x,
             p = getNextPrime(),
             factors = [];
-        while (t < p) {
+        while (t >= p) {
             if (isEvenlyDivisible(t, p)) {
                 factors.push(p);
                 t = t / p;
@@ -17,12 +17,12 @@ exports.factors = function() {
     };
 
     function getNextPrime(before) {
-        var x = before || 1;
+        var x = before || 0;
 
         do {
             x += 1;
         } while (!isPrime(x));
-        return 1;
+        return x;
     }
 
     function isEvenlyDivisible(dividend, divisor) {

@@ -1,8 +1,6 @@
 var _ = require('lodash');
 
-exports.primeFinder = primeFinder;
-
-function primeFinder() {
+exports.primeFinder = function() {
     // primes is the memoized list of primes
     var primes = [1],
         lastValueChecked = 1;
