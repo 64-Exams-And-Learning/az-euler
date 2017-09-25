@@ -1,17 +1,11 @@
 var _ = require('lodash');
 
-exports.primeFinder = function () {
+exports.primeFinder = primeFinder;
 
+function primeFinder() {
     // primes is the memoized list of primes
     var primes = [1],
         lastValueChecked = 1;
-
-    function findNextPrime(value) {
-        while (!isCurrentlyKnownPrime([1], value)) {
-            value += 1;
-        }
-        return value;
-    }
 
     function isCurrentlyKnownPrime(primes, testValue) {
         // console.log(`isCurrentlyKnownPrime([${primes}],${testValue});`);
@@ -36,6 +30,7 @@ exports.primeFinder = function () {
             maxFloor = Math.floor(dividend / divisor);
             return (dividend % divisor === 0);
         }
+
         //console.log(`isNewPrime([${primes}],${t});`);
         while (primes[index] < maxFloor) {
             //for (var i = 1; i < primes.length; i++) {
@@ -54,7 +49,7 @@ exports.primeFinder = function () {
         return true;
     }
 
-    return function (x) {
+    return function(x) {
         var result = false;
         if (isCurrentlyKnownPrime(primes, x)) { return true; }
         // Since the value is not in the array, it's not a known prime, and if the last value checked was a prime, we wouldn't get here.
@@ -65,5 +60,7 @@ exports.primeFinder = function () {
         }
         lastValueChecked = x;
         return result;
-    }
-};
+    };
+
+
+}
