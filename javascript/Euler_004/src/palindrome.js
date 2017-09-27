@@ -6,16 +6,12 @@ exports.palindromeTool = function() {
             l = bytes.length,
             e = l - 1;
         for (var i = 0; i < l; i++) {
-            e = e - i;
             // this will test for single byte arrays and index crossing the half way point
             if (i >= e) return true;
             if (bytes[i] !== bytes[e]) return false;
+            e -= 1;
         }
 
         return true;
     };
-};
-
-exports.getLargest = function() {
-    return 999 * 999;
 };
