@@ -15,11 +15,11 @@ There are tseveral approaches:
 - set `y` = 999
 - set `p` = 0
 - while `x` >= 100
-   - while `y` >= 100
-      - set `t` = `x` * `y`
-      - if `t` is a palindrome
-          - set `p` = maximun `p` & `t`
-          - set `x` = `x` - 1
-          - set `y` = `x`
-      - else
-          - set `y` = `y` - 1
+    - while `y` >= 100
+       - set `t` = `x` * `y`
+       - if `t` is a palindrome
+           - set `p` = maximun `p` & `t`
+           - set `x` = `x` - 1
+           - set `y` = `x`
+       - else
+           - set `y` = `y` - 1
