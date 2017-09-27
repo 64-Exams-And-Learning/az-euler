@@ -18,9 +18,11 @@ There are tseveral approaches:
     - while `y` >= 100
         - set `t` = `x` * `y`
         - if `t` is a palindrome
+             - // I suspect the logic can be shorted out here and return the number as the answer
              - set `p` = maximun `p` & `t`
              - set `x` = `x` - 1
              - set `y` = `x`
         - else
              - set `y` = `y` - 1
     - set `x` = `x` - 1
+- `p` is answer
