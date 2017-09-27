@@ -23,3 +23,4 @@ There are tseveral approaches:
              - set `y` = `x`
         - else
              - set `y` = `y` - 1
+    - set `x` = `x` - 1
