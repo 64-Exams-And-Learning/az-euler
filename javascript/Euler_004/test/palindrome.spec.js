@@ -24,4 +24,10 @@ describe('palindrome', function() {
             isPalindrome(1010).should.be.false;
         });
     });
+    describe('largestPossibleValue', function() {
+        var isLargest = palindrome.getLargest();
+        it('isLargest should be 998001', function() {
+            isLargest.should.equal(998001);
+        });
+    });
 });

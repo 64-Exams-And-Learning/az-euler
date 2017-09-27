@@ -15,3 +15,7 @@ exports.palindromeTool = function() {
         return true;
     };
 };
+
+exports.getLargest = function() {
+    return 999 * 999;
+};
