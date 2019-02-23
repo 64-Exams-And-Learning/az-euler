@@ -6,7 +6,8 @@
   "scripts": {
     "tsc-init": "tsc --init",
     "tsc": "tsc",
-    "test": "tsc && nyc mocha --recursive"
+    "coverage": "tsc && nyc mocha --recursive",
+    "test": "tsc && mocha --recursive --reporter list"
   },
   "author": "walt speelman <walt.speelman@gmail.com>",
   "license": "UNLICENSED",
