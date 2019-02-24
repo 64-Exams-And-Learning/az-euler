@@ -5,13 +5,12 @@ export class Primes {
     static isEvenlyDivisible = (dividend: number, divisor: number): boolean => dividend % divisor === 0;
 
     static isNewPrime = (value: number): boolean => {
-        // console.log(`Known: ${Primes.Known}`);
-        // console.log(`Value: ${value}`);
-        var maxFloor = value;
-        var isComposite = false;
+        var isComposite = false; // assume prime (this gives us our first prime, namely 2)
+        var maxTestValue = Math.sqrt(value); 
 
         for (var e = 0; e < Primes.Known.length; e++) {
-            if (Primes.isEvenlyDivisible(value, Primes.Known[e])) {
+            var known = Primes.Known[e];
+            if (known <= maxTestValue && Primes.isEvenlyDivisible(value, known)) {
                 isComposite = true;
                 break; // found a divisor, don't continue
             }
@@ -32,8 +31,19 @@ export function Range(size: number, start = 0): number[] {
     return [...Array(size).keys()].map(i => i + start);
 }
 
+export function BelowCeiling(ceiling:number):number[]{
+    var r: number[] = [];
+    for (var i =2;i <= ceiling;i++){
+        if (isPrime(i)) r.push(i);
+    }
+    return r;
+}
+
+// Prime numbers are the natural numbers greater than one that are not products of two smaller numbers
 export function isPrime(value: number): boolean {
-    // Prime numbers are the natural numbers greater than one that are not products of two smaller numbers
+
+    // console.log(Primes.Known);
+
     // This allows us a couple of quick tests to get started
     if (value % 1 !== 0) return false; // must be a natural (integer) number
     if (value <= 1) return false; // must be greater then 1
@@ -43,6 +53,7 @@ export function isPrime(value: number): boolean {
     // We many have tested a lesser number, and since it wasn't prime it must be composite
     if (value <= Primes.TestedCeiling) return false;
 
+    // Haven't found a prime yet, starting from where we last left off let's start looking ...
     var finalValue = true;
 
     // loop from TestedCeiling to passed in value
