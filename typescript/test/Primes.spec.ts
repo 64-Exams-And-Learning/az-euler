@@ -33,20 +33,29 @@ describe("Test the Range utility", () => {
     it("Range(3,10) should be [10,11,12]", () => f.Range(3, 10).should.deep.equal([10, 11, 12]));
 });
 
-describe("Test to retrieve a range of primes",()=>{
-    describe("where an upper limit of 2",()=>{
-        it("should be [2]",()=>f.BelowCeiling(2).should.deep.equal([2]));
+describe("Test to retrieve a range of primes", () => {
+    describe("where an upper limit of 2", () => {
+        it("should be [2]", () => f.BelowCeiling(2).should.deep.equal([2]));
     });
-    describe("where an upper limit of 3",()=>{
-        it("should be [2,3]",()=>f.BelowCeiling(3).should.deep.equal([2,3]));
+    describe("where an upper limit of 3", () => {
+        it("should be [2,3]", () => f.BelowCeiling(3).should.deep.equal([2, 3]));
     });
-    describe("where an upper limit of 4",()=>{
-        it("should be [2,3]",()=>f.BelowCeiling(4).should.deep.equal([2,3]));
+    describe("where an upper limit of 4", () => {
+        it("should be [2,3]", () => f.BelowCeiling(4).should.deep.equal([2, 3]));
     });
-    describe("where an upper limit of 10",()=>{
-        it("should be [2,3,5,7]",()=>f.BelowCeiling(10).should.deep.equal([2,3,5,7]));
+    describe("where an upper limit of 10", () => {
+        it("should be [2,3,5,7]", () => f.BelowCeiling(10).should.deep.equal([2, 3, 5, 7]));
     });
-    describe("where an upper limit of 20",()=>{
-        it("should be [2,3,5,7,11,13,17,19]",()=>f.BelowCeiling(20).should.deep.equal([2,3,5,7,11,13,17,19]));
+    describe("where an upper limit of 20", () => {
+        it("should be [2,3,5,7,11,13,17,19]", () => f.BelowCeiling(20).should.deep.equal([2, 3, 5, 7, 11, 13, 17, 19]));
     });
+});
+
+describe("Counting primes", () => {
+    it("2 should be the 1st prime", () => f.Nth(1).should.equal(2));
+    it("3 should be the 2nd prime", () => f.Nth(2).should.equal(3));
+    it("5 should be the 3rd prime", () => f.Nth(3).should.equal(5));
+    it("7 should be the 4th prime", () => f.Nth(4).should.equal(7));
+    it("11 should be the 5th prime", () => f.Nth(5).should.equal(11));
+    it("104743 should be the 10001st prime", () => f.Nth(10001).should.equal(104743));
 });

@@ -47,7 +47,7 @@ describe("simple powers",()=>{
 })
 
 // describe(`2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?`, () => {
-describe.only("Product of the factors of", () => {
+describe("Product of the factors of", () => {
     it("1...2 should equal 2", () => ProductOfFactors(2).should.equal(2));
     it("1...3 should equal 6", () => ProductOfFactors(3).should.equal(6));
     it("1...4 should equal 12", () => ProductOfFactors(4).should.equal(12));
