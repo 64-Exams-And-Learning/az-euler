@@ -4,7 +4,7 @@ const should: Chai.Should = chai.should();
 import "mocha";
 import { CalculateLargestProduct } from "../src/LargestProduct";
 
-describe.only(`
+describe(`
 The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
 
 73167176531330624919225119674426574742355349194934
@@ -52,7 +52,7 @@ const TheNumber = "73167176531330624919225119674426574742355349194934" +
     "05886116467109405077541002256983155200055935729725" +
     "71636269561882670428252483600823257530420752963450";
 
-describe.only("Brute force method", () => {
+describe("Brute force method", () => {
     it("using 4 should result in 5832", () => CalculateLargestProduct(TheNumber, 4).should.equal(5832));
     it("using 13 should result in 23514624000", () => CalculateLargestProduct(TheNumber, 13).should.equal(23514624000));
 });
@@ -62,7 +62,7 @@ var str_4 = strings.filter(s => s.length >= 4);
 var str_13 = strings.filter(s => s.length >= 13);
 
 // multiple by 0 == 0
-describe.only("Splitting on 0", () => {
+describe("Splitting on 0", () => {
     it("should yield 98 strings", () => strings.length.should.equal(98));
     it("should yield ## strings greater then 4", () => str_4.length.should.equal(66));
     it("should yield ## strings greater then 13", () => str_13.length.should.equal(24));
