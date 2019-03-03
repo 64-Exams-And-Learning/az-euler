@@ -4,7 +4,7 @@ const should: Chai.Should = chai.should();
 import "mocha";
 import { isPythagorean, isTriplet, getSquares, getNaturalPythagorean } from "../src/SpecialPythagoreanTriplet";
 
-describe.only(`
+describe(`
 
 A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
 a2 + b2 = c2
@@ -15,7 +15,7 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 `, () => { it("", () => { }) });
 
-describe.only("", () => {
+describe("", () => {
     describe("", () => {
         var tests = [
             { value: [3, 4, 5], isPythagorean: true, isTriplet: true, product: 60, sum: 12 },

@@ -59,3 +59,11 @@ describe("Counting primes", () => {
     it("11 should be the 5th prime", () => f.Nth(5).should.equal(11));
     it("104743 should be the 10001st prime", () => f.Nth(10001).should.equal(104743));
 });
+
+describe(`The sum of all primes below`,()=>{
+    var below10 = f.BelowCeiling(10).reduce((a,x) => a + x);
+    var below2m = f.BelowCeiling(2000000).reduce((a,x) => a + x);
+
+    it(`should be ${below10}`,()=>{});
+    it(`should be ${below2m}`,()=>{});
+});

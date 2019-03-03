@@ -68,3 +68,11 @@ describe("Splitting on 0", () => {
     it("should yield ## strings greater then 13", () => str_13.length.should.equal(24));
 });
 
+// reduce and reduce 
+describe("", () => {
+    it("reduce and reduce should be faster", () => {
+        TheNumber.split("0").filter(s => s.length >= 13).map(x => CalculateLargestProduct(x, 13)).reduce((m, x) => m = Math.max(m, x), 0)
+        .should.equal(17);
+    });
+}
+);
