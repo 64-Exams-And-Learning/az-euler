@@ -11,11 +11,16 @@ Okay, sometimes it's a different solution.  For the most part I'm trying to work
 
 We are also going to be building out a `dockerfile` for each language so that the examples can exectued on any machine with _Docker_ (tm) installed.
 
+.Wait There's More
+
+_AsciiDoc_ will be the defacto documentation standard, learn it.
+
 .Languages and Completed Examples
 [options="header"]
 |====
-| Language | Levels Completed
-| Javascript | 3, 4
-| Typescript | 1, 2, 5
-| Io | -
+| Language | Levels Completed | Attempted
+| clojure | | 3
+| Io | | 
+| Javascript | 3, 4 |
+| Typescript | 1, 2, 5 |
 |====
