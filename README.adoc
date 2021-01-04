@@ -1,0 +1,21 @@
+Challenges from the Euler Project
+=================================
+:Author: walt
+:Email: 2963975+waltiam@users.noreply.github.com
+
+== Same Solution, Different Languages
+
+Okay, sometimes it's a different solution.  For the most part I'm trying to work to the strengths of the language.
+
+.What Else
+
+We are also going to be building out a `dockerfile` for each language so that the examples can exectued on any machine with _Docker_ (tm) installed.
+
+.Languages and Completed Examples
+[options="header"]
+|====
+| Language | Levels Completed
+| Javascript | 3, 4
+| Typescript | 1, 2, 5
+| Io | -
+|====
